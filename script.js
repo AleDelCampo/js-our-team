@@ -22,7 +22,7 @@ const teamMembers = [
         ruolo: 'Social Media Manager',
         foto: 'angela-lopez-social-media-manager.jpg'
     },
-
+    
     {
         nome: 'Scot Estrada',
         ruolo: 'Developer',
@@ -35,6 +35,8 @@ const teamMembers = [
         foto: 'barbara-ramos-graphic-designer.jpg'
     }
 ];
+
+const images = 'img/';
 
 for (let i = 0; i < teamMembers.length; i++) {
     const member = teamMembers[i];
@@ -50,10 +52,12 @@ for (let i = 0; i < teamMembers.length; i++) {
 
     const showMember = document.createElement("div");
 
+    const imageUrl = images + member.foto;
+
     const memberInformations = `
         <p>Nome: ${member.nome}</p>
         <p>Ruolo: ${member.ruolo}</p>
-        <p>Foto: ${member.foto}</p>
+        <img src="${imageUrl}" alt="${member.nome}" />
     `;
 
     showMember.innerHTML = memberInformations;

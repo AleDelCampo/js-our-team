@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    background-color: violet;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 80px;
+    width: 100%;
+}
+
+#result {
+    color: red;
+    font-size: xx-large;
+}

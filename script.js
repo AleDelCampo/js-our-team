@@ -42,3 +42,21 @@ for (let i = 0; i < teamMembers.length; i++) {
     console.log("Ruolo: " + member.ruolo);
     console.log("Foto: " + member.foto);
 }
+
+const teamInformations = document.getElementById("team");
+
+for (let i = 0; i < teamMembers.length; i++) {
+    const member = teamMembers[i];
+
+    const showMember = document.createElement("div");
+
+    const memberInformations = `
+        <p>Nome: ${member.nome}</p>
+        <p>Ruolo: ${member.ruolo}</p>
+        <p>Foto: ${member.foto}</p>
+    `;
+
+    showMember.innerHTML = memberInformations;
+
+    teamInformations.appendChild(showMember);
+}

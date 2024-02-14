@@ -22,7 +22,7 @@ const teamMembers = [
         ruolo: 'Social Media Manager',
         foto: 'angela-lopez-social-media-manager.jpg'
     },
-    
+
     {
         nome: 'Scot Estrada',
         ruolo: 'Developer',
@@ -38,26 +38,20 @@ const teamMembers = [
 
 const images = 'img/';
 
-for (let i = 0; i < teamMembers.length; i++) {
-    const member = teamMembers[i];
-    console.log("Nome: " + member.nome);
-    console.log("Ruolo: " + member.ruolo);
-    console.log("Foto: " + member.foto);
-}
-
 const teamInformations = document.getElementById("team");
 
 for (let i = 0; i < teamMembers.length; i++) {
     const member = teamMembers[i];
 
     const showMember = document.createElement("div");
+    showMember.classList.add("member-card");
 
     const imageUrl = images + member.foto;
 
     const memberInformations = `
-        <p>Nome: ${member.nome}</p>
-        <p>Ruolo: ${member.ruolo}</p>
         <img src="${imageUrl}" alt="${member.nome}" />
+        <p class="member-name">Nome: ${member.nome}</p>
+        <p class="member-role">Ruolo: ${member.ruolo}</p>
     `;
 
     showMember.innerHTML = memberInformations;
